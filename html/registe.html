@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人注册-志愿襄阳</title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/registe.css" rel="stylesheet">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form action="registe.html" method="post">
+    <div class="page-header header">
+        <h1 id="title">欢迎访问志愿襄阳！<a href="#">登录</a></h1>
+    </div>
+    <div class="panel-body back">
+        <input type="text"  placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入姓" class="input-name" ><br>
+        <input type="text"  placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入名" class="input-name">
+    </div>
+    <div class="container back1 back">
+        <p>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>男</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="sa" checked>
+            <label>女</label>&nbsp;&nbsp;&nbsp;<input type="radio" name="sa">
+        </p>
+    </div>
+    <div class="container back1 back">
+      <p>
+          <label class="id-car1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出生日期</label>
+          <input type="date"placeholder="请选择出生日期" class="dis-boder id-car2">
+      </p>
+    </div>
+    <div class="container back1 back">
+        <p>
+            <label class="id-car1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;证件类型</label>
+            <select class="dis-boder id-car2" >
+                <option>--请选择--</option>
+                <option>学生证</option>
+                <option>港澳通行证</option>
+                <option>身份证</option>
+                <option>士官证</option>
+            </select>
+        </p>
+    </div>
+    <div class="container back1 back">
+        <p>
+            <input type="text"placeholder="请输入证件号码" class="dis-boder">
+        </p>
+    </div>
+    <div class="container back1 back">
+        <p>
+            <input type="password"placeholder="请输入新密码(注册后使用该密码登录)" class="dis-boder">
+        </p>
+    </div>
+    <div class="container back1 back">
+        <p>
+            <input type="password"placeholder="请确认新密码(注册后使用该密码登录)" class="dis-boder">
+        </p>
+    </div>
+    <div class="container back1 back">
+        <p>
+            <input type="tel"placeholder="请输入个人手机" class="dis-boder">
+        </p>
+    </div>
+    <div class="container back1 back">
+        <input id="uploadFile" placeholder="     请上传个人头像证件照" disabled="disabled" formenctype="multipart/form-data"accept="image/*"  />
+        <div class="fileUpload btn btn-default"id="co">
+            <span>上传照片</span>
+            <input id="uploadBtn" type="file" class="upload" />
+        </div>
+    </div>
+    <div class="container submit back2">
+        <button type="submit" class="btn btn-danger sub">提交</button>
+    </div>
+</form>
+<script>
+    document.getElementById("uploadBtn").onchange = function () {
+        document.getElementById("uploadFile").value = this.value;
+    };
+</script>
+</body>
+</html>
